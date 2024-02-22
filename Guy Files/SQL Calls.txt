@@ -1,0 +1,43 @@
+/api/seasons - select * from seasons;
+/api/circuits - select * from circuits;
+/api/circuits/ref - select * from circuits where circuitRef = ?
+/api/circuits/season/year - select * from circuits where season = ? order by round asc;
+/api/constructors  - select * from contructors;
+/api/constructors/ref - select * from contructors where constructorRef = ?;
+/api/drivers - select * from drivers;
+/api/drivers/ref - select * from drivers where driverRef = ?;
+/api/drivers/search/substring - did this in lab
+/api/drivers/race/raceId - select * from drivers where race_id = ?;
+/api/races/raceId - select * from races where race_name = ?
+/api/races/season/year -  select * from races where season = ? order by round
+/api/races/season/year/round -  select * from races where season = ? round = ?
+/api/races/circuits/ref - select races.year, races.name as race_name, circuits.name as circuit_name, circuits.location as circuit_location from
+  races join circuits on races.circuit_id = circuits.id where circuits.circuit_ref = 'monza' order by races.year;
+/api/races/circuits/ref/season/start/end - select * from races where circuit = 'monza' and year between 2015 and 2020;
+/api/results/raceId - 
+  select
+  drivers.driverRef,
+  drivers.code,
+  drivers.forename,
+  drivers.surname,
+  races.name,
+  races.round,
+  races.year,
+  races.date,
+  constructors.name,
+  constructors.constructorRef,
+  constructors.nationality
+from
+  results
+  join drivers on results.driverId = drivers.driverId
+  join races on results.raceId = races.raceId
+  join constructors on results.constructorId = constructors.constructorId
+where
+  races.raceId = 1106
+order by
+  results.grid asc;
+/api/results/driver/ref - select * from results where driver = 'max_verstappen';
+/api/results/driver/ref/seasons/start/end - select * from results where driver = 'sainz' and year >= 2022 and year <= 2022;
+/api/qualifying/raceId - select * from qualifying_results where race_id = 1106 order by position asc;
+/api/standings/raceId/drivers select driver_name, team_name, points from driver_standings where race_name = 'Spanish Grand Prix' order by position asc;
+/api/standings/raceId/constructors - select constructor_name, points from constructors_standings where race_name = 'specified_race' order by position asc;
