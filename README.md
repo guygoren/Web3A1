@@ -3,7 +3,7 @@
 
 **Please view `COMP4513 Assignment 1.pdf` for instructions**
 
-[/api/seasons](http://nasal-shared-paddleboat.glitch.me/api/seasons)
+[/api/seasons](http://nasal-shared-paddleboat.glitch.me/api/seasons)<br>
 [/api/circuits](http://nasal-shared-paddleboat.glitch.me/api/circuits)
 [/api/circuits/monza](http://nasal-shared-paddleboat.glitch.me/api/circuits/monza)
 [/api/circuits/calgary](http://nasal-shared-paddleboat.glitch.me/api/circuits/calgary)
