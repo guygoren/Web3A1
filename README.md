@@ -3,5 +3,5 @@
 
 **Please view `COMP4513 Assignment 1.pdf` for instructions**
 
-[test] (https://www.google.ca)
+[test](https://www.google.ca)
   

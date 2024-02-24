@@ -63,7 +63,7 @@ app.get('/api/circuits/season/:year', async (req, res) => {
     if(error){
       jsonMsg(res, "error reading from the database")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your year as no records match")
     }
     res.send(data); 
@@ -87,7 +87,7 @@ app.get('/api/constructors/:ref', async (req, res) => {
     if(error){
       jsonMsg(res, "error reading from the constructors table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your ref as no records match")
     }
     res.send(data); 
@@ -111,7 +111,7 @@ app.get('/api/drivers/:ref', async (req, res) => {
     if(error){
       jsonMsg(res, "error reading from the drivers table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your ref as no records match")
     }
     res.send(data); 
@@ -125,7 +125,7 @@ app.get('/api/drivers/search/:beg', async (req, res) => {
     if(error){
       jsonMsg(res, "error reading from the drivers table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your surname as no records match")
     }
     res.send(data); 
@@ -139,7 +139,7 @@ app.get('/api/drivers/race/:raceid', async (req, res) => {
     if(error){
       jsonMsg(res, "error reading from the driverStanding table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your raceId as no records match")
     }
     res.send(data); 
@@ -153,7 +153,7 @@ app.get('/api/races/:raceName', async (req, res) => {
     if(error){
       jsonMsg(res, "error reading from the races table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your race name as no records match")
     }
     res.send(data); 
@@ -168,7 +168,7 @@ app.get('/api/races/season/:year', async (req, res) => {
    if(error){
       jsonMsg(res, "error reading from the races table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your year as no records match")
     }
    res.send(data); 
@@ -182,7 +182,7 @@ app.get('/api/races/seasons/:year/:round', async (req, res) => {
    if(error){
       jsonMsg(res, "error reading from the races table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your year & round as no records match")
     }
    res.send(data); 
@@ -199,7 +199,7 @@ app.get('/api/races/circuits/:ref', async (req, res) => {
    if(error){
       jsonMsg(res, "error reading from the races table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your ref as no records match")
     }
    res.send(data); 
@@ -220,7 +220,7 @@ app.get('/api/races/circuits/:ref/season/:first/:last', async (req, res) => {
    if(req.params.last<req.params.first){
      jsonMsg(res,"Your last year cannot precede your first") 
    }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your ref & years as no records match")
     }
    res.send(data); 
@@ -237,7 +237,7 @@ app.get('/api/results/:id', async (req, res) => {
    if(error){
       jsonMsg(res, "error reading from the results table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your id as no records match")
     }
    res.send(data); 
@@ -252,7 +252,7 @@ app.get('/api/results/driver/:ref', async (req, res) => {
    if(error){
       jsonMsg(res, "error reading from the results table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your ref as no records match")
     }
    res.send(data); 
@@ -283,7 +283,7 @@ app.get('/api/results/driver/:ref/seasons/:start/:end', async (req, res) => {
       if(req.params.last<req.params.first){
         jsonMsg(res,"Your last year cannot precede your first") 
       }
-       if(!data.length()){
+       if(!data.length){
          jsonMsg(res, "Please check your ref & years as no records match")
        }
         res.send(data);
@@ -299,7 +299,7 @@ app.get('/api/qualifying/:raceId/', async (req, res) => {
    if(error){
       jsonMsg(res, "error reading from the qualifying table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your raceId as no records match")
     }
    res.send(data); 
@@ -314,7 +314,7 @@ app.get('/api/standings/:raceId/drivers', async (req, res) => {
    if(error){
       jsonMsg(res, "error reading from the driverStanding table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your raceId as no records match")
     }
    res.send(data); 
@@ -331,7 +331,7 @@ app.get('/api/standings/:raceId/constructors', async (req, res) => {
    if(error){
       jsonMsg(res, "error reading from the constructorStandings table")
     }
-    if(!data.length()){
+    if(!data.length){
       jsonMsg(res, "Please check your raceId as no records match")
     }
    res.send(data); 
